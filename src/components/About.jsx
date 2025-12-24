@@ -1,13 +1,18 @@
 import React from 'react';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import profileImg from '../assets/profile.png';
 
 const About = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const rotateX = useTransform(mouseY, [-300, 300], [15, -15]);
-  const rotateY = useTransform(mouseX, [-300, 300], [-15, 15]);
+  // Smooth the mouse movement with spring physics
+  const springConfig = { damping: 25, stiffness: 150 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
+
+  const rotateX = useTransform(smoothY, [-300, 300], [15, -15]);
+  const rotateY = useTransform(smoothX, [-300, 300], [-15, 15]);
 
   function handleMouseMove(event) {
     const rect = event.currentTarget.getBoundingClientRect();
