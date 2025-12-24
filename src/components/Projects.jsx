@@ -8,7 +8,7 @@ const projects = [
     title: 'Aplikasi Cuaca',
     description: 'Aplikasi ramalan cuaca realtime menggunakan OpenWeatherMap API dan geolokasi.',
     tech: ['React', 'Tailwind', 'API'],
-    github: '#',
+    github: 'https://mawmawmil.github.io/PTPN-RZ/',
     demo: '#',
     color: 'from-blue-400 to-blue-600',
     icon: '🌤️'
