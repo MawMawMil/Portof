@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import profileImg from '../assets/profile.png';
 
 const About = () => {
   return (
@@ -12,9 +13,13 @@ const About = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          {/* Placeholder for Profile Image - using a gradient box for now */}
-          <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 flex items-center justify-center text-4xl font-bold text-white/20">
-            IMG
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <img 
+              src={profileImg} 
+              alt="Profile" 
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
+            />
           </div>
         </motion.div>
 
