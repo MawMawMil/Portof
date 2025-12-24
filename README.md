@@ -26,8 +26,8 @@ Ini adalah website portofolio pribadi yang dibuat menggunakan **React**, **Tailw
 1.  **Clone repository ini** (atau download zip):
 
     ```bash
-    git clone https://github.com/mawmawmil/Portofolio.git
-    cd Portofolio
+    git clone https://github.com/mawmawmil/Portof.git
+    cd Portof
     ```
 
 2.  **Install dependensi**:
@@ -42,22 +42,24 @@ Ini adalah website portofolio pribadi yang dibuat menggunakan **React**, **Tailw
     npm run dev
     ```
 
-4.  Buka browser di `http://localhost:5173`.
+4.  Buka browser di `http://localhost:5173/Portof/`.
 
 ## Cara Deploy ke GitHub Pages 🌐
 
-Proyek ini sudah dikonfigurasi untuk deployment otomatis ke GitHub Pages.
+Proyek ini sudah dikonfigurasi untuk deployment otomatis ke GitHub Pages menggunakan GitHub Actions.
 
 1.  Pastikan `package.json` memiliki field `homepage`:
 
     ```json
-    "homepage": "https://mawmawmil.github.io/Portofolio/",
+    "homepage": "https://mawmawmil.github.io/Portof/",
     ```
 
-2.  Jalankan perintah deploy:
+2.  Push perubahan ke branch `main`:
 
     ```bash
-    npm run deploy
+    git add .
+    git commit -m "update"
+    git push origin main
     ```
 
-3.  Tunggu proses selesai, dan website anda akan aktif di URL tersebut!
+3.  GitHub Actions akan secara otomatis melakukan build dan deploy. Pastikan di **Settings > Pages**, source diatur ke **GitHub Actions**.
