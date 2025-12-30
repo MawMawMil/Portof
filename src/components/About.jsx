@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/qwq.jpeg';
 
 const About = () => {
   const mouseX = useMotionValue(0);
